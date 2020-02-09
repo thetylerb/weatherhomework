@@ -6,6 +6,10 @@ This is My Weather Dashboard
 
 ![screenshot]{https://gyazo.com/94f96cd8fe24aecb0e628219bd096328)>
 
+Link to deployed app 
+
+![link](https://thetylerb.github.io/weatherhomework/)
+
 After I initially put in a zip code it always remembered. Not sure how to get that off of it 
 
 
