@@ -133,17 +133,14 @@ function getCurrent(city) {
 }
 
 function getForecast(city) {
-    //get 5 day forecast
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + city + "&APPID=7e4c7478cc7ee1e11440bf55a8358ec3&units=imperial";
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        //add container div for forecast cards
         var newrow = $("<div>").attr("class", "forecast");
         $("#earthforecast").append(newrow);
 
-        //loop through array response to find the forecasts for 15:00
         for (var i = 0; i < response.list.length; i++) {
             if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
                 var newCol = $("<div>").attr("class", "one-fifth");
@@ -169,37 +166,28 @@ function getForecast(city) {
 }
 
 function clear() {
-    //clear all the weather
     $("#earthforecast").empty();
 }
 
 function saveLoc(loc){
-    //add this to the saved locations array
     if (savedLocations === null) {
         savedLocations = [loc];
     }
     else if (savedLocations.indexOf(loc) === -1) {
         savedLocations.push(loc);
     }
-    //save the new array to localstorage
     localStorage.setItem("weathercities", JSON.stringify(savedLocations));
     showPrevious();
 }
 
 $("#searchbtn").on("click", function () {
-    //don't refresh the screen
     event.preventDefault();
-    //grab the value of the input field
     var loc = $("#searchinput").val().trim();
-    //if loc wasn't empty
     if (loc !== "") {
-        //clear the previous forecast
         clear();
         currentLoc = loc;
         saveLoc(loc);
-        //clear the search field value
         $("#searchinput").val("");
-        //get the new forecast
         getCurrent(loc);
     }
 });
