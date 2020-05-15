@@ -48,7 +48,7 @@ function showPrevious() {
         $("#prevSearches").empty();
         var btns = $("<div>").attr("class", "list-group");
         for (var i = 0; i < savedLocations.length; i++) {
-            var locBtn = $("<a>").attr("href", "#").attr("id", "loc-btn").text(savedLocations[i]);
+            var locBtn = $("<a>").attr("href", "#").attr("id", "loc-btn",).text(savedLocations[i]);
             if (savedLocations[i] == currentLoc){
                 locBtn.attr("class", "list-group-item list-group-item-action active");
             }
@@ -75,7 +75,7 @@ function getCurrent(city) {
         var currCard = $("<div>").attr("class", "card bg-light");
         $("#earthforecast").append(currCard);
 
-        var currCardHead = $("<div>").attr("class", "card-header").text("Current weather for " + response.name);
+        var currCardHead = $("<div>").attr("class", "card-header",).text("Current weather for " + response.name,"text-white");
         currCard.append(currCardHead);
 
         var cardRow = $("<div>").attr("class", "row no-gutters");
@@ -90,10 +90,10 @@ function getCurrent(city) {
         var cardBody = $("<div>").attr("class", "card-body");
         textDiv.append(cardBody);
         //display city name
-        cardBody.append($("<h3>").attr("class", "card-title").text(response.name));
+        cardBody.append($("<h3>").attr("class", "card-title", "text-white").text(response.name));
         //display last updated
         var currdate = moment(response.dt, "X").format("dddd, MMMM Do YYYY, h:mm a");
-        cardBody.append($("<p>").attr("class", "card-text").append($("<small>").attr("class", "text-muted").text("Last updated: " + currdate)));
+        cardBody.append($("<p>").attr("class", "card-text").append($("<small>").attr("class", "text-dark").text("Last updated: " + currdate)));
         //display Temperature
         cardBody.append($("<p>").attr("class", "card-text").html("Temperature: " + response.main.temp + " &#8457;"));
         //display Humidity
@@ -146,7 +146,7 @@ function getForecast(city) {
                 var newCol = $("<div>").attr("class", "one-fifth");
                 newrow.append(newCol);
 
-                var newCard = $("<div>").attr("class", "card text-white bg-primary");
+                var newCard = $("<div>").attr("class", "card text-white bg-dark");
                 newCol.append(newCard);
 
                 var cardHead = $("<div>").attr("class", "card-header").text(moment(response.list[i].dt, "X").format("MMM Do"));
