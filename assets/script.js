@@ -48,7 +48,7 @@ function showPrevious() {
         $("#prevSearches").empty();
         var btns = $("<div>").attr("class", "list-group");
         for (var i = 0; i < savedLocations.length; i++) {
-            var locBtn = $("<a>").attr("href", "#").attr("id", "loc-btn",).text(savedLocations[i]);
+            var locBtn = $("<a>").attr("href", "#").attr("id", "loc-btn", "btn btn-dark").text(savedLocations[i]);
             if (savedLocations[i] == currentLoc){
                 locBtn.attr("class", "list-group-item list-group-item-action active");
             }
