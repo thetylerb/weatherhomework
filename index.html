@@ -15,10 +15,19 @@
     <title>Weather Where You Are</title>
 </head>
 
+<style>
+    body {
+      background-image: url('https://unsplash.com/photos/uu-Jw5SunYI');
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+    }
+    </style>
+
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">
-            <i class="material-icons">wb_sunny</i>&nbsp;Weather for you!</a>
+            <i class="material-icons">wb_sunny</i>&nbsp;Tyler's Weather App</a>
     </nav>
 <!-- loading bar -->
     <progress id="progressBar" class="progress is-medium is-primary" style="border-radius:0;"></progress>
@@ -53,6 +62,15 @@
             <div class="col-md-9">
                 <div class="container" id="earthforecast">
                     <!--Weather for current location-->
+                </div>
+            </div>
+
+            <div class="col-md-12"  id="videoDiv">
+                <div class="card bg-dark" id="video card">
+                    <h3>Weather from the ISS!</h3>
+
+                    <p align = "center"></p><iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/EEIk7gwjgIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
                 </div>
             </div>
         </div>

@@ -39,3 +39,11 @@
 .clear{
     padding-left: 100px;
 }
+
+iframe{
+    display: block;
+}
+
+h3{
+    color: white;
+}
