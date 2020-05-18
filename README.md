@@ -10,8 +10,6 @@ Link to deployed app
 
 ![link](https://thetylerb.github.io/weatherhomework/)
 
-After I initially put in a zip code it always remembered. Not sure how to get that off of it 
-
 
 # API's used
 
