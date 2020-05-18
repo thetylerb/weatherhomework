@@ -25,10 +25,10 @@
 
     <div class="container-fluid">
         <div class="row mt-3">
-            <div class="col-md-3 searcharea">
+            <div class="searcharea">
                 <h2 class="text-secondary">Search for a city:</h2>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="searchinput" type="search" aria-label="Search">
+                    <input type="text" class="form-control" id="searchinput" type="search" aria-label="Search" oninvalid="alert('You must search a city!');" required>
                     <div class="input-group-append">
                         <button class="btn btn-dark" id="searchbtn" type="submit">
                             <i class="material-icons">search</i>
@@ -38,13 +38,15 @@
                 <div class="mt-5" id="previousSearches">
                     <!--Buttons for previous searches here-->
 
-                    <div>
-                        <button id="clear" class="button is-link is-outlined is-danger is-fullwidth">
-                            Clear History
-                        </button>
-                    </div>                                
+                                                    
 
 
+                </div>
+
+                <div>
+                    <button id="clear" class="btn btn-danger button is-link is-outlined is-danger is-fullwidth">
+                        Clear History
+                    </button>
                 </div>
             </div>
 

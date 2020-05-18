@@ -72,7 +72,7 @@ function getCurrent(city) {
             initialize();
         }
     }).then(function (response) {
-        var currCard = $("<div>").attr("class", "card bg-light");
+        var currCard = $("<div>").attr("class", "card md-light");
         $("#earthforecast").append(currCard);
 
         var currCardHead = $("<div>").attr("class", "card-header",).text("Current weather for " + response.name,"text-white");
@@ -167,6 +167,7 @@ function getForecast(city) {
 
 function clear() {
     $("#earthforecast").empty();
+    $("#previousSearches").empty();
 }
 
 function saveLoc(loc){
@@ -198,5 +199,11 @@ $(document).on("click", "#loc-btn", function () {
     showPrevious();
     getCurrent(currentLoc);
 });
+
+
+
+$("#clear").on('click', function (e) {
+    clear();
+})
 
 initialize();

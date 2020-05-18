@@ -1,6 +1,7 @@
 .searcharea {
     background-color: #3e4444;
     padding: 20px;
+    float: right;
 }
 
 .uvindex {
@@ -33,4 +34,8 @@
 #searchbtn{
     padding: 6px 5px 0px 5px;
 
+}
+
+.clear{
+    padding-left: 100px;
 }
