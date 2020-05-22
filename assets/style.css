@@ -42,8 +42,10 @@
 
 iframe{
     display: block;
+    align-content: center;
 }
 
 h3{
     color: white;
 }
+

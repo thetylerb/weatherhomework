@@ -9,6 +9,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/style.css" rel="stylesheet">
 
@@ -25,37 +26,44 @@
     </style>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">
-            <i class="material-icons">wb_sunny</i>&nbsp;Tyler's Weather App</a>
-    </nav>
-<!-- loading bar -->
-    <progress id="progressBar" class="progress is-medium is-primary" style="border-radius:0;"></progress>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="material-icons">wb_sunny</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+          </ul>
+        </div>
+      </nav>
 
-    <div class="container-fluid">
-        <div class="row mt-3">
-            <div class="searcharea">
-                <h2 class="text-secondary">Search for a city:</h2>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="searchinput" type="search" aria-label="Search" oninvalid="alert('You must search a city!');" required>
-                    <div class="input-group-append">
-                        <button class="btn btn-dark" id="searchbtn" type="submit">
-                            <i class="material-icons">search</i>
+
+    <div class="container">
+        <div class="row md-3">
+            <div class="col-md-4">
+                <div class="searcharea">
+                    <h2 class="text-secondary">Search for a city:</h2>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="searchinput" type="search" aria-label="Search" oninvalid="alert('You must search a city!');" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-dark" id="searchbtn" type="submit">
+                                <i class="material-icons">search</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-5" id="previousSearches">
+                        <!--Buttons for previous searches here-->
+
+                                                        
+
+
+                    </div>
+
+                    <div>
+                        <button id="clear" class="btn btn-danger button is-link is-outlined is-danger is-fullwidth">
+                            Clear History
                         </button>
                     </div>
-                </div>
-                <div class="mt-5" id="previousSearches">
-                    <!--Buttons for previous searches here-->
-
-                                                    
-
-
-                </div>
-
-                <div>
-                    <button id="clear" class="btn btn-danger button is-link is-outlined is-danger is-fullwidth">
-                        Clear History
-                    </button>
                 </div>
             </div>
 
@@ -66,11 +74,13 @@
             </div>
 
             <div class="col-md-12"  id="videoDiv">
-                <div class="card bg-dark" id="video card">
-                    <h3>Weather from the ISS!</h3>
+                <div class="container">
+                    <div class="col-md-12card bg-dark" id="video card">
+                        <h3>Weather from the ISS!</h3>
 
-                    <p align = "center"></p><iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/EEIk7gwjgIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                        <p align = "center"></p><iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/EEIk7gwjgIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
+                    </div>
                 </div>
             </div>
         </div>
