@@ -8,7 +8,7 @@ This is My Weather Dashboard
 Link to deployed app 
 
 ![link](https://thetylerb.github.io/weatherhomework/)
-
+https://thetylerb.github.io/weatherhomework/
 
 # API's used
 
