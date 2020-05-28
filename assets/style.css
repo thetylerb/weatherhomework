@@ -1,3 +1,8 @@
+body{
+    background: -webkit-linear-gradient(to right, #000000, #434343); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #434343);
+}
+
 .searcharea {
     background-color: #3e4444;
     padding: 20px;
@@ -49,3 +54,12 @@ h3{
     color: white;
 }
 
+#videoDiv{
+    float: right;
+}
+
+#video-card{
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
